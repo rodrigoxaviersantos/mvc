@@ -1,0 +1,139 @@
+﻿@model IEnumerable<mvc.Models.Tarefa>
+
+<style>
+    /* Estilo do cabeçalho */
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px; /* Adicione margem inferior para evitar sobreposição */
+    }
+
+    /* Estilo da tabela */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    /* Estilo dos links */
+    a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #555;
+        color: #555;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+
+    a:hover {
+        background-color: #555;
+        color: white;
+    }
+
+    /* Estilo do botão Nova Tarefa */
+    .btn-nova-tarefa {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+    }
+
+    .btn-nova-tarefa:hover {
+        background-color: #218838;
+        color: white;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Minhas Tarefas";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Seus metadados, links para estilos, etc. aqui -->
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Minhas Tarefas</h1>
+        </header>
+
+        <nav>
+            <!-- Sua barra de navegação aqui -->
+        </nav>
+
+        <main>
+            <p>
+                <a asp-action="Criar" class="btn-nova-tarefa">Nova Tarefa</a>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Titulo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Concluida)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataInicio)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataFim)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Titulo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Concluida)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataInicio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataFim)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Editar", "Editar", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                                @Html.ActionLink("Deletar", "Deletar", new { id = item.Id }, new { @class = "btn btn-danger" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Seus scripts e outros elementos do final da página aqui -->
+
+</body>
+</html>

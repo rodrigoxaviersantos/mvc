@@ -1,0 +1,93 @@
+﻿@model mvc.Models.Tarefa
+
+<style>
+    /* Estilo para o título da página */
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+
+    /* Estilo para o bloco de detalhes */
+    .details-container {
+        margin-top: 20px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    /* Estilo para os termos (dt) na lista de detalhes */
+    .details-term {
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    /* Estilo para os dados (dd) na lista de detalhes */
+    .details-data {
+        margin-bottom: 10px;
+    }
+
+    /* Estilo para os links de ação */
+    .action-link {
+        display: inline-block;
+        margin-right: 10px;
+        color: #007bff;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .action-link:hover {
+            text-decoration: underline;
+            color: #007bff;
+        }
+</style>
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div class="details-container">
+    <h4>Tarefa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2 details-term">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10 details-data">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2 details-term">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class="col-sm-10 details-data">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class="col-sm-2 details-term">
+            @Html.DisplayNameFor(model => model.Concluida)
+        </dt>
+        <dd class="col-sm-10 details-data">
+            @Html.DisplayFor(model => model.Concluida)
+        </dd>
+        <dt class="col-sm-2 details-term">
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </dt>
+        <dd class="col-sm-10 details-data">
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+        <dt class="col-sm-2 details-term">
+            @Html.DisplayNameFor(model => model.DataFim)
+        </dt>
+        <dd class="col-sm-10 details-data">
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    @* <a asp-action="Editar" class="action-link">Editar</a> | *@
+    <a asp-action="Index" class="action-link">Voltar à Lista</a>
+</div>

@@ -1,0 +1,130 @@
+﻿@model mvc.Models.Tarefa
+
+<style>
+
+    /* Estilo para a barra de navegação */
+    nav {
+        background-color: #343a40;
+        padding: 10px 0;
+    }
+
+    nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            border-radius: 3px;
+    }
+
+     nav a:hover {
+                background-color: #555;
+     }
+    /* Adicione estilos conforme necessário */
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+
+    h4 {
+        color: #555;
+        margin-top: 20px;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-check {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    a.back-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #fff;
+        background-color: #007bff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        a.back-link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+</style>
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Tarefa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInicio" class="control-label"></label>
+                <input asp-for="DataInicio" class="form-control" type="datetime-local" />
+                <span asp-validation-for="DataInicio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DataFim" class="control-label"></label>
+                <input asp-for="DataFim" class="form-control" type="datetime-local" />
+                <span asp-validation-for="DataFim" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Concluida" /> @Html.DisplayNameFor(model => model.Concluida)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> 
+                <a asp-action="Index" class="back-link">Voltar à Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
