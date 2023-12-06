@@ -10,7 +10,7 @@
 
     <style>
         body {
-            padding-top: 56px; /* Adjusted for the fixed navbar height */
+            padding-top: 56px; 
         }
 
         header {
@@ -45,15 +45,16 @@
         }
 
         footer {
-            background-color: #f8f9fa;
+            background-color: #272829;
             padding: 10px 0;
             margin-top: 20px;
             text-align: center;
             border-top: 1px solid #e1e1e1;
+            color: #fff;
         }
 
             footer a {
-                color: #343a40;
+                color: #f8f9fa;
                 text-decoration: none;
             }
 
@@ -66,7 +67,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">mvc</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Tarefa" asp-action="Index">Lista de Tarefas</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -77,10 +78,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Sobre" asp-action="Sobre">Sobre</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Contato">Contato</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contato">Contato</a>
+
                         </li>
                     </ul>
                 </div>
@@ -93,11 +96,12 @@
         </main>
     </div>
 
-  @*   <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div> *@
+            &copy; 2023 - Todos os direitos reservados - Rodrigo Xavier
+        </div> 
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

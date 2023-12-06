@@ -2,7 +2,25 @@
     ViewData["Title"] = "Contato";
 }
 
-<h1>Contato</h1>
+<h1>@ViewData["Title"]</h1>
 
-<p>
-</p>
+<div>
+    <p>Entre em contato conosco preenchendo o formulário abaixo:</p>
+
+    <form>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
+        </div>
+        <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem:</label>
+            <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+    </form>
+</div>
+

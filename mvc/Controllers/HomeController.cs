@@ -14,13 +14,13 @@ namespace mvc.Controllers
 
         public IActionResult Sobre()
         {
-            return View();
+            return View("Sobre");
         }
 
         public IActionResult Contato()
         {
 
-            return View();
+            return View("Contato");
         }
 
 
