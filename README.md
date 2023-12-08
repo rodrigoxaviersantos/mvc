@@ -72,18 +72,28 @@ A aplicação está hospedada no GitHub Pages e pode ser acessada online. Clique
 Home 
 ![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/37d4a9e8-08b8-4b4e-b62f-36eefeea1318)
 
-Lista de tarefas
+GET (READ) retorna uma lista de tarefas
+
 ![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/465596b0-95d2-4f44-9b37-b034dd3d6f38)
 
 ![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/427d78bc-ce26-4f30-aeb8-ab9a49add99b)
 
-Editar 
-![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/c839870d-a584-4f79-83ba-81e5dc408824)
+POST (CREATE) cria uma tarefa
 
-Detalhes 
+![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/cf244535-d729-43f5-b286-d82ab4a8f842)
+
+PUT (UPDATE) atualiza uma tarefa existente
+
+![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/46c45503-8825-45e6-a4fd-1996e8eb6306)
+
+![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/824e3621-99b5-4e57-b112-d454041ff007)
+
+
+
+GET (READ) retorna dados de uma tarefa
 ![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/4d740359-7e81-4da2-8e70-7f2aaf9a72f1)
 
-Deletar 
+DELETE exclui uma tarefa
 ![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/59578f26-5f00-42d8-b432-9c428e17effe)
 
 Sobre
@@ -94,11 +104,6 @@ Contato
 
 
 
-
-
-### Deploy 
-
-![image](https://github.com/rodrigoxaviersantos/mvc/assets/116025593/f79ee016-9031-4a6e-a860-e13c9aa58d02)
 
 <h5 align="center">
   Desenvolvido por Rodrigo Xavier<p align='center'>
